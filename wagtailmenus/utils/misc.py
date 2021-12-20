@@ -27,9 +27,9 @@ def get_fake_request():
 
 
 def get_site_from_request(request, fallback_to_default=True):
-    site = getattr(request, 'site', None)
-    if isinstance(site, Site):
-        return request.site
+    #site = getattr(request, 'site', None)
+    #if isinstance(site, Site):
+    #    return request.site
     site = Site.find_for_request(request)
     if site:
         return site
